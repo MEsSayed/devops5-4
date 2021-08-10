@@ -10,6 +10,12 @@ node {
        sh './gradlew build'
 
     }
+    
+     stage('Gradle Lint') {
+
+       sh './gradlew lint'
+
+    }
 
     stage("Docker build"){
         sh 'docker version'
